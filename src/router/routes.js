@@ -1,19 +1,19 @@
-import mainRoutes from './main-routes';
+// import mainRoutes from './main-routes';
 
 export default [
     // ## login page
-    {
-        name: 'login',
-        path: '/login',
-        meta: { requiresAuth: false },
-        component: () => import(/* webpackChunkName: 'login' */ '../views/login'),
-    },
+    // {
+    //     name: 'login',
+    //     path: '/login',
+    //     meta: { requiresAuth: false },
+    //     component: () => import(/* webpackChunkName: 'login' */ '../views/login'),
+    // },
     // ## main page
     {
         path: '/',
-        meta: { requiresAuth: true },
+        // meta: { requiresAuth: true },
         component: () => import(/* webpackChunkName: 'common' */ '../views/layout'),
-        children: mainRoutes,
+        // children: mainRoutes,
     },
     // ## not found page
     // {
