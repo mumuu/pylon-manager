@@ -12,15 +12,15 @@ import axios from 'axios';
 // import storage from './storage'
 
 const instance = axios.create({
-    // baseURL: 'http://localhost:2080/',
-    baseURL: 'https://jsonplaceholder.uieee.com/',
-    timeout: 5000,
-    headers: {
-        // 'X-Custom-Header': 'foobar',
-        // // true: need, false: dont need
-        // 'Authorization': true,
-        // 'X-Requested-With': 'XMLHttpRequest'
-    },
+  // baseURL: 'http://localhost:2080/',
+  baseURL: 'https://jsonplaceholder.uieee.com/',
+  timeout: 5000,
+  headers: {
+    // 'X-Custom-Header': 'foobar',
+    // // true: need, false: dont need
+    // 'Authorization': true,
+    // 'X-Requested-With': 'XMLHttpRequest'
+  },
 });
 
 // instance.interceptors.request.use(config => {

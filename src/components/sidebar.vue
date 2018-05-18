@@ -13,7 +13,7 @@
 
 <script>
 // import { mapGetters, mapActions } from 'vuex'
-import MenuList from './menu'
+import MenuList from './menu';
 export default {
   name: 'app-sidebar',
   components: { MenuList },
@@ -23,5 +23,5 @@ export default {
   // methods: mapActions({
   //   toggleCollapse: 'toggleSidebarCollapse'
   // })
-}
+};
 </script>

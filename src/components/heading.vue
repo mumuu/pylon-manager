@@ -3,10 +3,18 @@
     <h1 class="title">{{ title }}</h1>
     <transition name="fade">
       <ul class="action" v-show="showAction">
-        <li><a href="#" class="icon-before icon-checkmark" @click="handleEnable"></a></li>
-        <li><a href="#" class="icon-before icon-blocked" @click="handle"></a></li>
-        <li><a href="#" class="icon-before icon-bin" @click="handle"></a></li>
-        <li><a href="#" class="icon-before icon-copy" @click="handle"></a></li>
+        <li>
+          <a href="#" class="icon-before icon-checkmark" @click="handleEnable"></a>
+        </li>
+        <li>
+          <a href="#" class="icon-before icon-blocked" @click="handle"></a>
+        </li>
+        <li>
+          <a href="#" class="icon-before icon-bin" @click="handle"></a>
+        </li>
+        <li>
+          <a href="#" class="icon-before icon-copy" @click="handle"></a>
+        </li>
       </ul>
     </transition>
     <form class="search icon-before icon-search" v-if="showSearch" @submit="handleSearch">
@@ -26,18 +34,17 @@ export default {
     btnText: String,
     btnType: {
       type: String,
-      default: 'primary'
+      default: 'primary',
     },
     btnSize: {
       type: String,
-      default: 'small'
+      default: 'small',
     },
     btnIcon: {
       type: String,
-      default: 'plus'
-    }
+      default: 'plus',
+    },
   },
-  methods: {
-  }
-}
+  methods: {},
+};
 </script>

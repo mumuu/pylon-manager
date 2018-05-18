@@ -30,34 +30,34 @@ const store = new Vuex.Store({ state, getters, mutations, actions, modules, stri
 
 // ## Hot module replacement
 if (module.hot) {
-    module.hot.accept(
-        [
-            './getters',
-            './mutations',
-            './actions',
-            './modules/comments',
-            './modules/options',
-            './modules/posts',
-            './modules/terms',
-            './modules/users',
-            './modules/demo',
-        ],
-        () => {
-            store.hotUpdate({
-                getters: require('./getters'),
-                mutations: require('./mutations'),
-                actions: require('./actions'),
-                modules: {
-                    comments: require('./modules/comments'),
-                    options: require('./modules/options'),
-                    posts: require('./modules/posts'),
-                    terms: require('./modules/terms'),
-                    users: require('./modules/users'),
-                    demo: require('./modules/demo'),
-                },
-            });
+  module.hot.accept(
+    [
+      './getters',
+      './mutations',
+      './actions',
+      './modules/comments',
+      './modules/options',
+      './modules/posts',
+      './modules/terms',
+      './modules/users',
+      './modules/demo',
+    ],
+    () => {
+      store.hotUpdate({
+        getters: require('./getters'),
+        mutations: require('./mutations'),
+        actions: require('./actions'),
+        modules: {
+          comments: require('./modules/comments'),
+          options: require('./modules/options'),
+          posts: require('./modules/posts'),
+          terms: require('./modules/terms'),
+          users: require('./modules/users'),
+          demo: require('./modules/demo'),
         },
-    );
+      });
+    },
+  );
 }
 
 export default store;

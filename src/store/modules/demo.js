@@ -5,7 +5,7 @@ import { storage } from '../../utils';
  * @type {Object}
  */
 const state = {
-    message: storage.get('wedn_net_demo_message'),
+  message: storage.get('wedn_net_demo_message'),
 };
 
 /**
@@ -13,7 +13,7 @@ const state = {
  * @type {Object}
  */
 const getters = {
-    message: state => state.message,
+  message: state => state.message,
 };
 
 /**
@@ -21,9 +21,9 @@ const getters = {
  * @type {Object}
  */
 const mutations = {
-    CHANGE_MESSAGE(state, message) {
-        state.message = message;
-    },
+  CHANGE_MESSAGE(state, message) {
+    state.message = message;
+  },
 };
 
 /**
@@ -31,10 +31,10 @@ const mutations = {
  * @type {Object}
  */
 const actions = {
-    changeMessage({ commit }, message) {
-        console.log(message);
-        commit('CHANGE_MESSAGE', message);
-    },
+  changeMessage({ commit }, message) {
+    console.log(message);
+    commit('CHANGE_MESSAGE', message);
+  },
 };
 
 // Export module

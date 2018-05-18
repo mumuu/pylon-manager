@@ -16,11 +16,11 @@
 // import Header from '../components/header'
 // import Sidebar from '../components/sidebar'
 export default {
-    name: 'layout',
-    title: 'Pylon Manager',
-    components: {
-        // 'app-header': Header,
-        // 'app-sidebar': Sidebar
-    }
+  name: 'layout',
+  title: 'Pylon Manager',
+  components: {
+    // 'app-header': Header,
+    // 'app-sidebar': Sidebar
+  },
 }
 </script>

@@ -6,13 +6,13 @@ import { axios, storage } from '../utils';
  * @param  {Object} session 新的客户端会话信息
  */
 export const CHANGE_SESSION = (state, session) => {
-    if (session && session.token) {
-        // change axios authorization header
-        axios.defaults.headers.Authorization = `Bearer ${session.token}`;
-    }
-    // TODO: new session mixin
-    Object.assign(state.session, session);
-    storage.set('wedn_net_session_info', state.session);
+  if (session && session.token) {
+    // change axios authorization header
+    axios.defaults.headers.Authorization = `Bearer ${session.token}`;
+  }
+  // TODO: new session mixin
+  Object.assign(state.session, session);
+  storage.set('wedn_net_session_info', state.session);
 };
 
 /**
@@ -20,8 +20,8 @@ export const CHANGE_SESSION = (state, session) => {
  * @param  {Object} state Vuex状态对象
  */
 export const TOGGLE_SIDEBAR_COLLAPSE = state => {
-    state.sidebar.collapse = !state.sidebar.collapse;
-    storage.set('wedn_net_sidebar_collapse', state.sidebar.collapse);
+  state.sidebar.collapse = !state.sidebar.collapse;
+  storage.set('wedn_net_sidebar_collapse', state.sidebar.collapse);
 };
 
 // ==================== DEMO ====================
@@ -31,8 +31,8 @@ export const TOGGLE_SIDEBAR_COLLAPSE = state => {
  * @param  {Object} state Vuex状态对象
  */
 export const INCREMENT = state => {
-    state.count++;
-    storage.set('wedn_net_demo_count', state.count);
+  state.count++;
+  storage.set('wedn_net_demo_count', state.count);
 };
 
 /**
@@ -40,6 +40,6 @@ export const INCREMENT = state => {
  * @param  {Object} state Vuex状态对象
  */
 export const DECREMENT = state => {
-    state.count--;
-    storage.set('wedn_net_demo_count', state.count);
+  state.count--;
+  storage.set('wedn_net_demo_count', state.count);
 };
