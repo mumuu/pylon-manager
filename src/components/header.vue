@@ -1,5 +1,9 @@
 <template>
-  <header class="header">
+  <div>this is header
+    <router-link v-bind:to="'Login'">Login</router-link>
+    <router-link v-bind:to="'Dapps'">Dapps</router-link>
+  </div>
+  <!-- <header class="header">
     <h1 class="brand">
       <router-link to="/">{{ header.name }}</router-link>
     </h1>
@@ -23,19 +27,19 @@
         </li>
       </ul>
     </nav>
-  </header>
+  </header>  -->
 </template>
 
 <script>
-// import { mapGetters } from 'vuex'
-import MenuList from './menu';
+// // import { mapGetters } from 'vuex'
+// import MenuList from './menu';
 export default {
   name: 'app-header',
-  components: { MenuList },
-  computed: mapGetters({
-    header: 'header',
-    session: 'session',
-  }),
+  // components: { MenuList },
+  // computed: mapGetters({
+  //   header: 'header',
+  //   session: 'session',
+  // }),
   created() {
     // this.$store.dispatch('getCurrentUser')
   },
@@ -46,4 +50,6 @@ export default {
     },
   },
 };
+//
+//
 </script>

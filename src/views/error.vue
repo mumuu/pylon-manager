@@ -4,7 +4,7 @@
       <h1>404</h1>
       <h2>Not Found</h2>
       <footer>← 返回到
-        <a href="/">WEDN.NET</a>
+        <a href="/">Pylon</a>
       </footer>
     </section>
   </div>

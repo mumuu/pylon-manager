@@ -1,8 +1,8 @@
 <template>
   <div>
-    <!-- <app-header/> -->
+    <app-header id="header" />
     <section class="main">
-      <!-- <app-sidebar/> -->
+      <app-sidebar/>
       <main class="content">
         <transition name="content">
           <router-view class="inner"></router-view>
@@ -13,14 +13,19 @@
 </template>
 
 <script>
-// import Header from '../components/header'
-// import Sidebar from '../components/sidebar'
+import Header from '../components/header';
+import Sidebar from '../components/sidebar';
 export default {
   name: 'layout',
   title: 'Pylon Manager',
   components: {
-    // 'app-header': Header,
-    // 'app-sidebar': Sidebar
+    'app-header': Header,
+    'app-sidebar': Sidebar,
   },
-}
+};
 </script>
+<style>
+#header {
+  background: red;
+}
+</style>
