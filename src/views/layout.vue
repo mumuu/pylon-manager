@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header id="header" />
+    <app-header />
     <section class="main">
       <app-sidebar/>
       <main class="content">
@@ -24,8 +24,3 @@ export default {
   },
 };
 </script>
-<style>
-#header {
-  background: red;
-}
-</style>

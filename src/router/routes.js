@@ -1,4 +1,7 @@
 import mainRoutes from './main-routes';
+import login from '../views/login.vue';
+import layout from '../views/layout.vue';
+import error from '../views/error.vue';
 
 export default [
   // ## login page
@@ -6,13 +9,13 @@ export default [
     name: 'login',
     path: '/login',
     meta: { requiresAuth: false },
-    component: () => import(/* webpackChunkName: 'login' */ '../views/login'),
+    component: login,
   },
   // ## main page
   {
     path: '/',
     meta: { requiresAuth: true },
-    component: () => import(/* webpackChunkName: 'common' */ '../views/layout'),
+    component: layout,
     children: mainRoutes,
   },
   // ## not found page
@@ -20,6 +23,6 @@ export default [
     name: 'not-found',
     path: '*',
     meta: { requiresAuth: false },
-    component: () => import(/* webpackChunkName: 'common' */ '../views/error'),
+    component: error,
   },
 ];

@@ -1,7 +1,6 @@
 <template>
-  <p style="background: blue">this is sidebar</p>
-  <!-- <aside class="sidebar" :class="{ collapse: sidebar.collapse }"> -->
-  <!-- <nav class="menu">
+  <aside class="sidebar" :class="{ collapse: sidebar.collapse }">
+    <nav class="menu">
       <p>this is menu</p>
       <menu-list :items="sidebar.menus" active-class/>
     </nav>
@@ -9,20 +8,20 @@
       <a class="toggle icon-before icon-circle-left" title="Toggle navigation menu" @click="toggleCollapse"></a>
       <router-link class="copyright" :to="{ name: 'about' }" :title="'About' + sidebar.copyright">&copy; {{ sidebar.copyright }}</router-link>
     </footer> -->
-  <!-- </aside> -->
+  </aside>
 </template>
 
 <script>
-// import { mapGetters, mapActions } from 'vuex'
-// import MenuList from './menu';
+import { mapGetters, mapActions } from 'vuex';
+import MenuList from './menu';
 export default {
-  // name: 'app-sidebar',
-  // components: { MenuList },
-  // computed: mapGetters({
-  //   sidebar: 'sidebar'
-  // }),
-  // methods: mapActions({
-  //   toggleCollapse: 'toggleSidebarCollapse'
-  // })
+  name: 'app-sidebar',
+  components: { MenuList },
+  computed: mapGetters({
+    sidebar: 'sidebar',
+  }),
+  methods: mapActions({
+    toggleCollapse: 'toggleSidebarCollapse',
+  }),
 };
 </script>

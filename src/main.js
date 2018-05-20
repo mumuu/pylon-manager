@@ -8,6 +8,8 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 // import plugins from './plugins';
 import store from './store';
+// import './assets/styles/element/index.css';
+import './assets/styles/main.scss';
 
 Vue.use(ElementUI);
 // Vue.use(plugins);
