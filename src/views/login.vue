@@ -31,13 +31,13 @@
 <script>
 export default {
   name: 'login',
-  title: 'Login « WEDN.NET | make IT better',
+  title: 'Login « Pylon Manager',
   data() {
     // form model
     // TODO: remove default values
     const model = {
-      username: 'zce',
-      password: 'wanglei',
+      // username: 'zce',
+      // password: 'wanglei',
     };
     // form validate rules
     const rules = {
