@@ -1,3 +1,3 @@
 import Resource from './resource';
 
-export default new Resource('dapps');
+export default new Resource('Dapps');

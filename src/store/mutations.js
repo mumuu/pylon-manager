@@ -24,22 +24,6 @@ export const TOGGLE_SIDEBAR_COLLAPSE = state => {
   storage.set('wedn_net_sidebar_collapse', state.sidebar.collapse);
 };
 
-// ==================== DEMO ====================
-
-/**
- * 增加计数器计数
- * @param  {Object} state Vuex状态对象
- */
-export const INCREMENT = state => {
-  state.count++;
-  storage.set('wedn_net_demo_count', state.count);
-};
-
-/**
- * 减少计数器计数
- * @param  {Object} state Vuex状态对象
- */
-export const DECREMENT = state => {
-  state.count--;
-  storage.set('wedn_net_demo_count', state.count);
+export const CHANGE_DAPPS = (state, dapps) => {
+  state.dapps = dapps;
 };

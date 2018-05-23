@@ -1,4 +1,4 @@
-import { axios, storage } from '../utils';
+import { storage } from '../utils';
 
 const state = {
   /**
@@ -18,7 +18,7 @@ const state = {
      * @type {String}
      */
     name: 'Pylon Manager',
-
+    dapps: {},
     /**
      * 顶部菜单
      * @type {Array}
@@ -102,12 +102,12 @@ const state = {
         icon: 'home',
         name: 'dapps',
       },
-      {
-        text: 'Dashboard',
-        icon: 'meter',
-        name: 'dashboard',
-        // children: [{ text: 'Home', name: 'dashboard' }, { text: 'Update', name: 'update' }],
-      },
+      // {
+      //   text: 'Dashboard',
+      //   icon: 'meter',
+      //   name: 'dashboard',
+      //   // children: [{ text: 'Home', name: 'dashboard' }, { text: 'Update', name: 'update' }],
+      // },
       // {
       //   divider: true,
       // },
@@ -207,19 +207,6 @@ const state = {
       // },
     ],
   },
-
-  // ==================== DEMO ====================
-
-  /**
-   * 计数器
-   * @type {Number}
-   */
-  count: storage.get('wedn_net_demo_count') || 0,
 };
-
-if (state.session && state.session.token) {
-  // init axios headers
-  axios.defaults.headers.Authorization = `Bearer ${state.session.token}`;
-}
 
 export default state;

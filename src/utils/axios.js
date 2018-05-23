@@ -13,7 +13,8 @@ import axios from 'axios';
 
 const instance = axios.create({
   // baseURL: 'http://localhost:2080/',
-  baseURL: 'https://jsonplaceholder.uieee.com/',
+  // baseURL: 'https://jsonplaceholder.uieee.com/',
+  baseURL: 'http://39.106.123.63:8000/api/v1/',
   timeout: 5000,
   headers: {
     // 'X-Custom-Header': 'foobar',
